@@ -5,6 +5,15 @@ class StartScrean1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          GestureDetector(
+            child: Text("Skip"),
+          ),
+          Image(image: AssetImage("assets/Group 2805.png")),
+        ],
+      ),
+    );
   }
 }
