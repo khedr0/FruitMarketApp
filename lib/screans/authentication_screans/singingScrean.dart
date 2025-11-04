@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fruit_market/screans/authentication/signUpScrean.dart';
+import 'package:fruit_market/screans/authentication_screans/signUpScrean.dart';
 
 class SingingScrean extends StatelessWidget {
   static String id = "singingScrean";

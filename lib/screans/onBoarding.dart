@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_market/screans/authentication/singingScrean.dart';
 import 'package:fruit_market/widgets/customButton.dart';
+
+import 'authentication_screans/singingScrean.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
