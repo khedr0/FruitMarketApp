@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/screans/authentication/singingScrean.dart';
 import 'package:fruit_market/widgets/customButton.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class OnBoarding extends StatefulWidget {
+  const OnBoarding({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<OnBoarding> createState() => _OnBoardingState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnBoardingState extends State<OnBoarding> {
   final PageController _controller = PageController();
   int currentPage = 0;
 
@@ -97,16 +98,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               pagesData.length,
-              (index) => AnimatedContainer(
-                duration: const Duration(milliseconds: 300),
+              (index) => Container(
                 margin: const EdgeInsets.symmetric(horizontal: 4),
-                height: 10,
-                width: currentPage == index ? 22 : 10,
+                height: 8,
+                width: 8,
                 decoration: BoxDecoration(
+                  shape: BoxShape.circle,
                   color: currentPage == index
                       ? const Color(0xFF204F38)
                       : Colors.grey.shade400,
-                  borderRadius: BorderRadius.circular(20),
                 ),
               ),
             ),
@@ -127,9 +127,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     duration: const Duration(milliseconds: 400),
                     curve: Curves.easeInOut);
               } else {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("استنى")),
-                );
+                Navigator.pushNamed(context, SingingScrean.id);
               }
             },
           ),
