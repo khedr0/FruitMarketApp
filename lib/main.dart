@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/screans/authentication_screans/checkingByPhone.dart';
+import 'package:fruit_market/screans/authentication_screans/loginScrean.dart';
 import 'package:fruit_market/screans/authentication_screans/signUpScrean.dart';
 import 'package:fruit_market/screans/authentication_screans/singingScrean.dart';
 import 'package:fruit_market/screans/onBoarding.dart';
@@ -21,6 +23,8 @@ class FruitMarketApp extends StatelessWidget {
         'startScrean': (context) => const OnBoarding(),
         'singingScrean': (context) => const SingingScrean(),
         'SignUpScreen': (context) => const SignUpScreen(),
+        "loginScrean": (context) => const Loginscrean(),
+        "checkingScrean": (context) => const Checkingbyphone(),
       },
     );
   }

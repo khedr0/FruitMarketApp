@@ -1,13 +1,15 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:fruit_market/screans/authentication_screans/checkingByPhone.dart';
 
 import '../../widgets/customTextField.dart';
 import '../later/navbar.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
-  static String id = "SignUpScreen";
+class Loginscrean extends StatelessWidget {
+  static String id = "loginScrean";
+
+  const Loginscrean({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
                 const Text(
-                  "Sign Up to Wikala",
+                  "Login to Wikala",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -47,18 +49,9 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
 
-                // Full Name
-                const CustomTextField(
-                  label: 'Full Name',
-                  hint: 'First and Last Name',
-                  isRequired: true,
-                ),
-
-                const SizedBox(height: 16),
-
                 // Phone
                 const CustomTextField(
-                  label: "Phone Number with Whatsapp ",
+                  label: "Phone Number",
                   hint: "Mobile Number",
                   hasCountryCode: true,
                   isRequired: true,
@@ -73,8 +66,23 @@ class SignUpScreen extends StatelessWidget {
                   isRequired: true,
                 ),
 
-                const SizedBox(height: 30),
-
+                const SizedBox(height: 16),
+                Container(
+                  alignment: AlignmentDirectional.topEnd,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, Checkingbyphone.id);
+                    },
+                    child: Text(
+                      'Forget Password?',
+                      style: const TextStyle(
+                        color: Color(0xff004D8E),
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
                 // Sign up button
                 SizedBox(
                   width: double.infinity,
@@ -96,7 +104,7 @@ class SignUpScreen extends StatelessWidget {
                       );
                     },
                     child: const Text(
-                      'Sign Up',
+                      ' Login ',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -123,13 +131,13 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'Terms of Service',
-                          style: const TextStyle(color: Colors.blue),
+                          style: const TextStyle(color: Color(0xff004D8E)),
                           recognizer: TapGestureRecognizer()..onTap = () {},
                         ),
                         const TextSpan(text: ' and our '),
                         TextSpan(
                           text: 'Privacy Policy',
-                          style: const TextStyle(color: Colors.blue),
+                          style: const TextStyle(color: Color(0xff004D8E)),
                           recognizer: TapGestureRecognizer()..onTap = () {},
                         ),
                       ],
@@ -143,21 +151,21 @@ class SignUpScreen extends StatelessWidget {
                 Center(
                   child: RichText(
                     text: TextSpan(
-                      text: 'Already have an account? ',
+                      text: 'Don’t have an account?',
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 14,
                       ),
                       children: [
                         TextSpan(
-                          text: 'Login',
+                          text: ' |Sign up ',
                           style: const TextStyle(
-                            color: Colors.blue,
+                            color: Color(0xff004D8E),
                             decoration: TextDecoration.underline,
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              Navigator.pushNamed(context, "loginScrean");
+                              Navigator.pushNamed(context, "SignUpScreen");
                             },
                         ),
                       ],

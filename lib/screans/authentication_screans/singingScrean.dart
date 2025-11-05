@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fruit_market/screans/authentication_screans/signUpScrean.dart';
 
 class SingingScrean extends StatelessWidget {
   static String id = "singingScrean";
@@ -78,10 +77,10 @@ class SingingScrean extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, SignUpScreen.id);
+                            Navigator.pushNamed(context, "loginScrean");
                           },
                           child: Text(
-                            "Sign In",
+                            "Login",
                             style: TextStyle(
                               color: Color(0xff004D8E), // لون الكلمة
                               decoration: TextDecoration.underline,
