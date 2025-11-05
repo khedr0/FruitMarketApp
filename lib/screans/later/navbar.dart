@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 
-class HomeScreen extends StatefulWidget {
+class NavBar extends StatefulWidget {
   @override
-  State<HomeScreen> createState() => HomeScreenState();
+  State<NavBar> createState() => NavBarState();
 }
 
-class HomeScreenState extends State<HomeScreen> {
+class NavBarState extends State<NavBar> {
   int selectedIndex = 0;
 
   List<Widget> pages = [
