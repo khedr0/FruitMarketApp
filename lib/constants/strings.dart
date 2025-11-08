@@ -41,7 +41,12 @@ class AppStrings {
   static const String deliveryArrived = 'Delivery Arrived';
   static const String sellers = "Sellers";
   static const String showAll = "Show all";
-
+  static const String categories = "Categories";
+  static const String pets = "Pets";
+  static const String phone = "Phone";
+  static const String vegetables = "Vegetables";
+  static const String fruits = "Fruits";
+  static const String products = "Products";
   // Filters / UI
   static const String close = 'Close';
   static const String applyFilter = 'Apply Filter';

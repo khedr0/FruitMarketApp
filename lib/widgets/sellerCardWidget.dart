@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class sellerCardWidget extends StatelessWidget {
-  const sellerCardWidget({
+class SellerCardWidget extends StatelessWidget {
+  const SellerCardWidget({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, 'sellerScrean');
+      },
       child: Card(
         elevation: 2,
         child: Padding(
