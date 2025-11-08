@@ -23,8 +23,8 @@ class FruitMarketApp extends StatelessWidget {
         'startScrean': (context) => const OnBoarding(),
         'singingScrean': (context) => const SingingScrean(),
         'SignUpScreen': (context) => const SignUpScreen(),
-        "loginScrean": (context) => const Loginscrean(),
-        "checkingScrean": (context) => const Checkingbyphone(),
+        "loginScrean": (context) => const LoginScreen(),
+        "phoneVerificationScreen": (context) => const PhoneVerificationScreen(),
       },
     );
   }

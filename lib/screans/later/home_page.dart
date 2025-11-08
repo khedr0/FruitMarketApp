@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/constants/strings.dart';
 import 'package:fruit_market/widgets/dropDownMenuFilterWidget.dart';
 
 import '../../widgets/categoryCardWidget.dart';
@@ -14,7 +15,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Fruit Market",
+          AppStrings.fruitMarket,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Color(0xff204F38),
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
                   return AlertDialog(
                     title: Center(
                         child: Text(
-                      "Filter by",
+                      AppStrings.filterBy,
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     )),
@@ -44,7 +45,7 @@ class HomePage extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              "Delivered To",
+                              AppStrings.deliveredTo,
                               style: TextStyle(
                                   fontSize: 12, color: Color(0xff858D9A)),
                             ),
@@ -59,16 +60,19 @@ class HomePage extends StatelessWidget {
                         ),
                         DropDownMenuFilterWidget(),
                         Row(
-                          children: [CircularCheckboxExample(), Text("Offers")],
+                          children: [
+                            CircularCheckboxExample(),
+                            Text(AppStrings.offers)
+                          ],
                         ),
                         Row(
                           children: [
                             CircularCheckboxExample(),
-                            Text("Free Delivery")
+                            Text(AppStrings.freeDelivery)
                           ],
                         ),
                         Custombutton(
-                          text: Text("Apply Filter"),
+                          text: Text(AppStrings.applyFilter),
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
@@ -82,7 +86,7 @@ class HomePage extends StatelessWidget {
                             Navigator.of(context).pop(); // يغلق البوب أب
                           },
                           child: Text(
-                            "Close",
+                            AppStrings.close,
                             style: TextStyle(color: Color(0xff656565)),
                           ),
                         ),
@@ -124,11 +128,11 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Sellers",
+                  AppStrings.sellers,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Show all",
+                  AppStrings.showAll,
                   style: TextStyle(fontSize: 16, color: Color(0xff235C95)),
                 ),
               ],

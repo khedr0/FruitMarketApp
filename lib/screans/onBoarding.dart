@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/constants/strings.dart';
 import 'package:fruit_market/widgets/customButton.dart';
 
+import '../constants/colors.dart';
 import 'authentication_screans/singingScrean.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -17,18 +19,18 @@ class _OnBoardingState extends State<OnBoarding> {
   final List<Map<String, String>> pagesData = [
     {
       "image": "assets/Group 2805.png",
-      "title": "E Shopping",
-      "description": "Explore op organic fruits & grab them"
+      "title": AppStrings.eShopping,
+      "description": AppStrings.exploreFruits
     },
     {
       "image": "assets/Group 2805.png",
-      "title": "Delivery Arrived",
-      "description": "Order is arrived at your Place."
+      "title": AppStrings.deliveryArrived,
+      "description": AppStrings.orderArrived
     },
     {
       "image": "assets/Group 2805.png",
-      "title": "Delivery Arrived",
-      "description": "Order is arrived at your Place"
+      "title": AppStrings.deliveryArrived,
+      "description": AppStrings.orderArrived
     },
   ];
 
@@ -43,8 +45,8 @@ class _OnBoardingState extends State<OnBoarding> {
               onTap: () {
                 _controller.jumpToPage(pagesData.length - 1);
               },
-              child: const Text(
-                "Skip",
+              child: Text(
+                AppStrings.skip,
                 style: TextStyle(
                   fontSize: 16,
                   color: Color(0xff656565),
@@ -106,8 +108,8 @@ class _OnBoardingState extends State<OnBoarding> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: currentPage == index
-                      ? const Color(0xFF204F38)
-                      : Colors.grey.shade400,
+                      ? AppColors.primary
+                      : AppColors.primaryLighter,
                 ),
               ),
             ),
@@ -115,7 +117,9 @@ class _OnBoardingState extends State<OnBoarding> {
           const SizedBox(height: 40),
           Custombutton(
             text: Text(
-              currentPage == pagesData.length - 1 ? "Get Started" : "Next",
+              currentPage == pagesData.length - 1
+                  ? AppStrings.getStarted
+                  : AppStrings.next,
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 16,

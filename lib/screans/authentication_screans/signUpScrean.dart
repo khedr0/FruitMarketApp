@@ -2,8 +2,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../constants/colors.dart';
+import '../../constants/strings.dart';
 import '../../widgets/customTextField.dart';
-import '../later/navbar.dart';
+import '../../widgets/navbar.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -30,16 +32,16 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 const Text(
-                  "Fruit Market",
+                  AppStrings.fruitMarket,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color(0xff204F38),
+                    color: AppColors.primaryDark,
                     fontSize: 35,
                   ),
                 ),
                 const SizedBox(height: 30),
                 const Text(
-                  "Sign Up to Wikala",
+                  AppStrings.signUpToWikala,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -49,8 +51,8 @@ class SignUpScreen extends StatelessWidget {
 
                 // Full Name
                 const CustomTextField(
-                  label: 'Full Name',
-                  hint: 'First and Last Name',
+                  label: AppStrings.fullName,
+                  hint: AppStrings.firstAndLastName,
                   isRequired: true,
                 ),
 
@@ -58,8 +60,8 @@ class SignUpScreen extends StatelessWidget {
 
                 // Phone
                 const CustomTextField(
-                  label: "Phone Number with Whatsapp ",
-                  hint: "Mobile Number",
+                  label: AppStrings.phoneNumberWithWhatsapp,
+                  hint: AppStrings.mobileNumber,
                   hasCountryCode: true,
                   isRequired: true,
                 ),
@@ -68,8 +70,8 @@ class SignUpScreen extends StatelessWidget {
 
                 // Password
                 const CustomTextField(
-                  label: 'Password',
-                  hint: "Password",
+                  label: AppStrings.password,
+                  hint: AppStrings.password,
                   isRequired: true,
                 ),
 
@@ -80,7 +82,7 @@ class SignUpScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2D5F4F),
+                      backgroundColor: AppColors.primary,
                       padding: const EdgeInsets.symmetric(vertical: 14),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -96,43 +98,12 @@ class SignUpScreen extends StatelessWidget {
                       );
                     },
                     child: const Text(
-                      'Sign Up',
+                      AppStrings.signUp,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 20),
-
-                // Terms text
-                Center(
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
-                      ),
-                      children: [
-                        const TextSpan(
-                          text: 'By continuing you agree to our ',
-                        ),
-                        TextSpan(
-                          text: 'Terms of Service',
-                          style: const TextStyle(color: Colors.blue),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
-                        ),
-                        const TextSpan(text: ' and our '),
-                        TextSpan(
-                          text: 'Privacy Policy',
-                          style: const TextStyle(color: Colors.blue),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
-                        ),
-                      ],
                     ),
                   ),
                 ),
@@ -143,16 +114,16 @@ class SignUpScreen extends StatelessWidget {
                 Center(
                   child: RichText(
                     text: TextSpan(
-                      text: 'Already have an account? ',
+                      text: AppStrings.alreadyHaveAccount,
                       style: const TextStyle(
-                        color: Colors.black,
+                        color: AppColors.black,
                         fontSize: 14,
                       ),
                       children: [
                         TextSpan(
-                          text: 'Login',
+                          text: ' |${AppStrings.login}',
                           style: const TextStyle(
-                            color: Colors.blue,
+                            color: AppColors.secondaryDark,
                             decoration: TextDecoration.underline,
                           ),
                           recognizer: TapGestureRecognizer()

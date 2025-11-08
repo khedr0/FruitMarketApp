@@ -1,119 +1,111 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../constants/colors.dart';
+import '../../constants/strings.dart';
+
 class SingingScrean extends StatelessWidget {
   static String id = "singingScrean";
   const SingingScrean({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
           child: Column(
             children: [
               Align(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Icon(FontAwesomeIcons.xmark),
+                  onPressed: () => Navigator.pop(context),
+                  icon: const Icon(FontAwesomeIcons.xmark),
                 ),
               ),
-              SizedBox(
-                height: 50,
-              ),
+              const SizedBox(height: 50),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      "Fruit Market",
+                    const Text(
+                      AppStrings.fruitMarket,
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff204F38),
-                          fontSize: 35),
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.primaryDark,
+                        fontSize: 35,
+                      ),
                     ),
-                    SizedBox(
-                      height: 30,
+                    const SizedBox(height: 30),
+                    const Text(
+                      AppStrings.welcomeToApp,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                      ),
                     ),
-                    Text(
-                      "Welcome to Our app",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    SigningButton(
-                      title: "Sign in with Phone Number",
+                    const SizedBox(height: 30),
+                    const SigningButton(
+                      title: AppStrings.signInWithPhone,
                       icon: FontAwesomeIcons.phone,
                       backgroundColor: Colors.transparent,
-                      foregroundColor: Color(0xff242729),
+                      foregroundColor: AppColors.textPrimary,
                     ),
-                    SigningButton(
+                    const SigningButton(
                       icon: FontAwesomeIcons.google,
-                      title: "Sign in with Google",
+                      title: AppStrings.signInWithGoogle,
                       backgroundColor: Colors.transparent,
-                      foregroundColor: Color(0xff242729),
+                      foregroundColor: AppColors.textPrimary,
                     ),
-                    SigningButton(
-                        icon: FontAwesomeIcons.facebook,
-                        title: "Sign in with Facebook",
-                        backgroundColor: Color(0xff235C95),
-                        foregroundColor: Colors.white),
-                    SizedBox(
-                      height: 30,
+                    const SigningButton(
+                      icon: FontAwesomeIcons.facebook,
+                      title: AppStrings.signInWithFacebook,
+                      backgroundColor: Color(0xFF235C95),
+                      foregroundColor: AppColors.white,
                     ),
+                    const SizedBox(height: 30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          "Already member? ",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
+                        const Text(
+                          AppStrings.alreadyMember,
+                          style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         GestureDetector(
                           onTap: () {
                             Navigator.pushNamed(context, "loginScrean");
                           },
-                          child: Text(
-                            "Login",
+                          child: const Text(
+                            AppStrings.login,
                             style: TextStyle(
-                              color: Color(0xff004D8E), // لون الكلمة
+                              color: AppColors.secondaryDark,
                               decoration: TextDecoration.underline,
-                              decorationColor:
-                                  Color(0xff004D8E), // نفس اللون بالظبط
+                              decorationColor: AppColors.secondaryDark,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
+                    const SizedBox(height: 50),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child: RichText(
                         textAlign: TextAlign.center,
                         text: const TextSpan(
-                          style:
-                              TextStyle(color: Color(0xff88909C), fontSize: 15),
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: 15,
+                          ),
                           children: [
-                            TextSpan(text: 'By continue you agree to our '),
+                            TextSpan(text: AppStrings.byContinuePart1),
                             TextSpan(
-                              text: 'Terms of Service',
-                              style: TextStyle(color: Color(0xff005B96)),
+                              text: AppStrings.termsOfService,
+                              style: TextStyle(color: AppColors.secondaryDark),
                             ),
-                            TextSpan(text: ' and our '),
+                            TextSpan(text: AppStrings.andOur),
                             TextSpan(
-                              text: 'Privacy Policy',
-                              style: TextStyle(color: Color(0xff005B96)),
+                              text: AppStrings.privacyPolicy,
+                              style: TextStyle(color: AppColors.secondaryDark),
                             ),
                           ],
                         ),
@@ -140,8 +132,8 @@ class SigningButton extends StatelessWidget {
     super.key,
     required this.icon,
     required this.title,
-    required this.backgroundColor, // مطلوب من المستخدم
-    required this.foregroundColor, // مطلوب من المستخدم
+    required this.backgroundColor,
+    required this.foregroundColor,
   });
 
   @override
@@ -155,7 +147,9 @@ class SigningButton extends StatelessWidget {
           backgroundColor: backgroundColor,
           foregroundColor: foregroundColor,
           side: const BorderSide(
-              color: Color(0xff656665), width: 1), // بوردر ثابت
+            color: AppColors.textSecondary,
+            width: 1,
+          ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
           ),

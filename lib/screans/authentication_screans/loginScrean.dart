@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fruit_market/screans/authentication_screans/checkingByPhone.dart';
 
+import '../../constants/colors.dart';
+import '../../constants/strings.dart';
 import '../../widgets/customTextField.dart';
-import '../later/navbar.dart';
+import '../../widgets/navbar.dart';
 
-class Loginscrean extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
   static String id = "loginScrean";
 
-  const Loginscrean({super.key});
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,63 +34,56 @@ class Loginscrean extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 const Text(
-                  "Fruit Market",
+                  AppStrings.fruitMarket,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color(0xff204F38),
+                    color: AppColors.primaryDark,
                     fontSize: 35,
                   ),
                 ),
                 const SizedBox(height: 30),
                 const Text(
-                  "Login to Wikala",
+                  AppStrings.loginToWikala,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                   ),
                 ),
                 const SizedBox(height: 30),
-
-                // Phone
                 const CustomTextField(
-                  label: "Phone Number",
-                  hint: "Mobile Number",
+                  label: AppStrings.phoneNumberWithWhatsapp,
+                  hint: AppStrings.mobileNumber,
                   hasCountryCode: true,
                   isRequired: true,
                 ),
-
                 const SizedBox(height: 16),
-
-                // Password
                 const CustomTextField(
-                  label: 'Password',
-                  hint: "Password",
+                  label: AppStrings.password,
+                  hint: AppStrings.password,
                   isRequired: true,
                 ),
-
                 const SizedBox(height: 16),
                 Container(
                   alignment: AlignmentDirectional.topEnd,
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, Checkingbyphone.id);
+                      Navigator.pushNamed(context, PhoneVerificationScreen.id);
                     },
-                    child: Text(
-                      'Forget Password?',
-                      style: const TextStyle(
-                        color: Color(0xff004D8E),
+                    child: const Text(
+                      AppStrings.forgetPassword,
+                      style: TextStyle(
+                        color: AppColors.secondaryDark,
                         decoration: TextDecoration.underline,
                       ),
                     ),
                   ),
                 ),
                 const SizedBox(height: 16),
-                // Sign up button
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2D5F4F),
+                      backgroundColor: AppColors.primary,
                       padding: const EdgeInsets.symmetric(vertical: 14),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -104,63 +99,29 @@ class Loginscrean extends StatelessWidget {
                       );
                     },
                     child: const Text(
-                      ' Login ',
+                      AppStrings.login,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 20),
-
-                // Terms text
-                Center(
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
-                      ),
-                      children: [
-                        const TextSpan(
-                          text: 'By continuing you agree to our ',
-                        ),
-                        TextSpan(
-                          text: 'Terms of Service',
-                          style: const TextStyle(color: Color(0xff004D8E)),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
-                        ),
-                        const TextSpan(text: ' and our '),
-                        TextSpan(
-                          text: 'Privacy Policy',
-                          style: const TextStyle(color: Color(0xff004D8E)),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 20),
-
-                // Login link
                 Center(
                   child: RichText(
                     text: TextSpan(
-                      text: 'Don’t have an account?',
+                      text: AppStrings.dontHaveAccount,
                       style: const TextStyle(
-                        color: Colors.black,
+                        color: AppColors.black,
                         fontSize: 14,
                       ),
                       children: [
                         TextSpan(
-                          text: ' |Sign up ',
+                          text: ' |${AppStrings.signUp}',
                           style: const TextStyle(
-                            color: Color(0xff004D8E),
+                            color: AppColors.secondaryDark,
                             decoration: TextDecoration.underline,
                           ),
                           recognizer: TapGestureRecognizer()
