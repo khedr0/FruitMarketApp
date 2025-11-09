@@ -7,7 +7,7 @@ class ProductWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, 'sellerScrean');
+        Navigator.pushNamed(context, 'productScreen');
       },
       child: Card(
         elevation: 2,

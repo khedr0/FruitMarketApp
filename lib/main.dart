@@ -4,6 +4,7 @@ import 'package:fruit_market/screans/authentication_screans/loginScrean.dart';
 import 'package:fruit_market/screans/authentication_screans/signUpScrean.dart';
 import 'package:fruit_market/screans/authentication_screans/singingScrean.dart';
 import 'package:fruit_market/screans/onBoarding.dart';
+import 'package:fruit_market/screans/productScreen.dart';
 import 'package:fruit_market/screans/sellerScrean.dart';
 import 'package:fruit_market/screans/splashScrean.dart';
 
@@ -26,7 +27,8 @@ class FruitMarketApp extends StatelessWidget {
         'SignUpScreen': (context) => const SignUpScreen(),
         "loginScrean": (context) => const LoginScreen(),
         "phoneVerificationScreen": (context) => const PhoneVerificationScreen(),
-        "sellerScrean": (context) => const SellerScrean()
+        "sellerScrean": (context) => const SellerScrean(),
+        "productScreen": (context) => const ProductScreen(),
       },
     );
   }
