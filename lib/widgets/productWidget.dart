@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/screans/productScreen.dart';
 
 class ProductWidget extends StatelessWidget {
   const ProductWidget({super.key});
@@ -7,7 +8,7 @@ class ProductWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, 'productScreen');
+        Navigator.pushNamed(context, ProductScreen.id);
       },
       child: Card(
         elevation: 2,

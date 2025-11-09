@@ -3,10 +3,11 @@ import 'package:fruit_market/constants/strings.dart';
 import 'package:fruit_market/widgets/customButton.dart';
 
 import '../constants/colors.dart';
-import 'authentication_screans/singingScrean.dart';
+import 'authentication_screans/singingScreen.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
+  static String id = "onBoarding";
 
   @override
   State<OnBoarding> createState() => _OnBoardingState();
@@ -132,7 +133,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     duration: const Duration(milliseconds: 400),
                     curve: Curves.easeInOut);
               } else {
-                Navigator.pushNamed(context, SingingScrean.id);
+                Navigator.pushNamed(context, SingingScreen.id);
               }
             },
           ),

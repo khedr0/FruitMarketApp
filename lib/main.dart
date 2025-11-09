@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/screans/authentication_screans/checkingByPhone.dart';
-import 'package:fruit_market/screans/authentication_screans/loginScrean.dart';
-import 'package:fruit_market/screans/authentication_screans/signUpScrean.dart';
-import 'package:fruit_market/screans/authentication_screans/singingScrean.dart';
+import 'package:fruit_market/screans/authentication_screans/loginScreen.dart';
+import 'package:fruit_market/screans/authentication_screans/signUpScreen.dart';
+import 'package:fruit_market/screans/authentication_screans/singingScreen.dart';
 import 'package:fruit_market/screans/onBoarding.dart';
 import 'package:fruit_market/screans/productScreen.dart';
-import 'package:fruit_market/screans/sellerScrean.dart';
-import 'package:fruit_market/screans/splashScrean.dart';
+import 'package:fruit_market/screans/sellerScreen.dart';
+import 'package:fruit_market/screans/splashScreen.dart';
 
 void main() {
   runApp(const FruitMarketApp());
@@ -19,15 +19,15 @@ class FruitMarketApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'splashScrean',
+      initialRoute: 'splashScreen',
       routes: {
-        'splashScrean': (context) => const SplashScreen(),
-        'startScrean': (context) => const OnBoarding(),
-        'singingScrean': (context) => const SingingScrean(),
+        'splashScreen': (context) => const SplashScreen(),
+        'onBoarding': (context) => const OnBoarding(),
+        'singingScreen': (context) => const SingingScreen(),
         'SignUpScreen': (context) => const SignUpScreen(),
-        "loginScrean": (context) => const LoginScreen(),
+        "loginScreen": (context) => const LoginScreen(),
         "phoneVerificationScreen": (context) => const PhoneVerificationScreen(),
-        "sellerScrean": (context) => const SellerScrean(),
+        "sellerScreen": (context) => const SellerScreen(),
         "productScreen": (context) => const ProductScreen(),
       },
     );

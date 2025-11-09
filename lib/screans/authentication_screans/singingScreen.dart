@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:fruit_market/screans/authentication_screans/loginScreen.dart';
 
 import '../../constants/colors.dart';
 import '../../constants/strings.dart';
 
-class SingingScrean extends StatelessWidget {
-  static String id = "singingScrean";
-  const SingingScrean({super.key});
+class SingingScreen extends StatelessWidget {
+  static String id = "singingScreen";
+  const SingingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +74,7 @@ class SingingScrean extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, "loginScrean");
+                            Navigator.pushNamed(context, LoginScreen.id);
                           },
                           child: const Text(
                             AppStrings.login,

@@ -6,9 +6,9 @@ import '../widgets/categoryCardWidget.dart';
 import '../widgets/productWidget.dart';
 import '../widgets/sellerCardWidget.dart';
 
-class SellerScrean extends StatelessWidget {
-  const SellerScrean({super.key});
-  static String id = "sellerScrean";
+class SellerScreen extends StatelessWidget {
+  const SellerScreen({super.key});
+  static String id = "sellerScreen";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
