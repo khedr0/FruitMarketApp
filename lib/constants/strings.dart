@@ -52,6 +52,7 @@ class AppStrings {
   static const String selectWight = "Select weight";
   static const String selectAddons = "Select Addons";
   static const String categoryName = "Category Name";
+  static const String basket = "Basket";
   // Filters / UI
   static const String close = 'Close';
   static const String applyFilter = 'Apply Filter';

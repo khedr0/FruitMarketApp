@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/constants/strings.dart';
+import 'package:fruit_market/screans/later/basketScreen.dart';
 
 import '../constants/colors.dart';
 import '../widgets/checkBox.dart';
@@ -27,7 +28,6 @@ class ProductScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // ---------- Product Image + Discount Badge ----------
             Stack(
               children: [
                 ClipRRect(
@@ -81,7 +81,6 @@ class ProductScreen extends StatelessWidget {
 
             const SizedBox(height: 4),
 
-            // ---------- Product name + price ----------
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -133,7 +132,6 @@ class ProductScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // ---------- Select weight ----------
             const ExpansionTile(
               // shape: Border(
               //   bottom: BorderSide(color: Colors.transparent, width: 0),
@@ -172,16 +170,16 @@ class ProductScreen extends StatelessWidget {
             const SizedBox(height: 10),
 
             // ---------- Select Addons ----------
-            const Text(
-              AppStrings.selectAddons,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: AppColors.textPrimary,
-              ),
-            ),
+
             const SizedBox(height: 6),
             const ExpansionTile(
-              title: Text("Choose addons"),
+              title: Text(
+                AppStrings.selectAddons,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.textPrimary,
+                ),
+              ),
               initiallyExpanded: true,
               children: [
                 Row(
@@ -203,7 +201,9 @@ class ProductScreen extends StatelessWidget {
               width: double.infinity,
               height: 48,
               child: ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, BasketScreen.id);
+                },
                 icon: const Icon(Icons.shopping_basket_outlined,
                     color: AppColors.white),
                 label: const Text(

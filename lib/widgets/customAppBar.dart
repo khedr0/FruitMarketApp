@@ -99,7 +99,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: Image.asset("assets/Layer 15.png"),
         )
       ],
-      automaticallyImplyLeading: false,
+      automaticallyImplyLeading: true,
       elevation: 0,
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../screans/later/home_page.dart';
+import '../screans/later/basketScreen.dart';
+import '../screans/later/homeScreen.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -11,9 +12,9 @@ class NavBarState extends State<NavBar> {
   int selectedIndex = 0;
 
   List<Widget> pages = [
-    HomePage(),
+    HomeScreen(),
     Center(child: Text('Orders')),
-    Center(child: Text('Basket')),
+    BasketScreen(),
     Center(child: Text('Favorite')),
     Center(child: Text('More')),
   ];
