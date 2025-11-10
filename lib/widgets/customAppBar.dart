@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/constants/colors.dart';
 
 import '../constants/strings.dart';
 import 'checkBox.dart';
@@ -15,12 +16,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(
+      backgroundColor: AppColors.white,
+      title: const Text(
         AppStrings.fruitMarket,
         style: TextStyle(
           fontWeight: FontWeight.bold,
-          color: Color(0xff204F38),
-          fontSize: 35,
+          color: AppColors.primaryDark,
+          fontSize: 27,
         ),
       ),
       actions: [
@@ -34,7 +36,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: Center(
+                  title: const Center(
                       child: Text(
                     AppStrings.filterBy,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -42,7 +44,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             AppStrings.deliveredTo,
@@ -58,21 +60,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                           ),
                         ],
                       ),
-                      DropDownMenuFilterWidget(),
-                      Row(
+                      const DropDownMenuFilterWidget(),
+                      const Row(
                         children: [
                           CircularCheckboxExample(),
                           Text(AppStrings.offers)
                         ],
                       ),
-                      Row(
+                      const Row(
                         children: [
                           CircularCheckboxExample(),
                           Text(AppStrings.freeDelivery)
                         ],
                       ),
                       Custombutton(
-                        text: Text(AppStrings.applyFilter),
+                        text: const Text(AppStrings.applyFilter),
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
@@ -85,7 +87,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         onPressed: () {
                           Navigator.of(context).pop(); // يغلق البوب أب
                         },
-                        child: Text(
+                        child: const Text(
                           AppStrings.close,
                           style: TextStyle(color: Color(0xff656565)),
                         ),
@@ -100,7 +102,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         )
       ],
       automaticallyImplyLeading: true,
-      elevation: 0,
+      elevation: .5,
+      shadowColor: AppColors.black,
     );
   }
 }

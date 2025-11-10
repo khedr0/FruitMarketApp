@@ -1,18 +1,18 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fruit_market/screans/authentication_screans/checkingByPhone.dart';
-import 'package:fruit_market/screans/authentication_screans/signUpScreen.dart';
+import 'package:fruit_market/screens/authentication_screes/sign_up_screen.dart';
 
 import '../../constants/colors.dart';
 import '../../constants/strings.dart';
 import '../../widgets/customTextField.dart';
 import '../../widgets/navbar.dart';
+import 'checking_by_phone.dart';
 
-class LoginScreen extends StatelessWidget {
+class LogInScreen extends StatelessWidget {
   static String id = "loginScreen";
 
-  const LoginScreen({super.key});
+  const LogInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_market/screans/sellerScreen.dart';
+import 'package:fruit_market/constants/colors.dart';
+
+import '../screens/sellerScreen.dart';
 
 class SellerCardWidget extends StatelessWidget {
   const SellerCardWidget({
@@ -12,10 +14,11 @@ class SellerCardWidget extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, SellerScreen.id);
       },
-      child: Card(
+      child: const Card(
+        color: AppColors.white,
         elevation: 2,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Row(
             children: [
               Image(

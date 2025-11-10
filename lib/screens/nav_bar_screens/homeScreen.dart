@@ -4,6 +4,7 @@ import 'package:fruit_market/constants/strings.dart';
 import '../../constants/colors.dart';
 import '../../widgets/categoryCardWidget.dart';
 import '../../widgets/customAppBar.dart';
+import '../../widgets/rowCheck.dart';
 import '../../widgets/sellerCardWidget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,9 +16,10 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppColors.white,
       appBar: CustomAppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: Column(
           children: [
+            ImageCarousel(),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -49,9 +51,22 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SellerCardWidget(),
-            SellerCardWidget(),
-            SellerCardWidget(),
+            Divider(
+              thickness: 2,
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SellerCardWidget(),
+                    SellerCardWidget(),
+                    SellerCardWidget(),
+                    SellerCardWidget(),
+                    SellerCardWidget(),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

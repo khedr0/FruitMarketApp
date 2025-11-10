@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fruit_market/widgets/quantitySelector.dart';
+
+import '../constants/colors.dart';
 // import 'package:fruit_market/constants/colors.dart'; // Assuming this exists
 // import 'package:fruit_market/widgets/quantitySelector.dart'; // Assuming this exists
 
@@ -10,29 +12,21 @@ class ProductCartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      // Replacing AppColors.white with a standard color for simplicity
-      // Replace with AppColors.white if your constant file is imported
       color: Colors.white,
       elevation: 2,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
-          // Use MainAxisAlignment.start to align items left
-          // and let Expanded/Padding handle the spacing
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center, // Align vertically
           children: [
-            // 1. Product Image (Fixed Width)
             Image.asset(
               "assets/product.png",
-              width: 80, // **Fixed size to control width**
+              width: 80,
               height: 80,
             ),
 
-            const SizedBox(width: 12), // Small space after image
-
-            // 2. Product Details (Takes remaining space)
-            // *** THE FIX: Wrap the details Column in Expanded ***
+            const SizedBox(width: 12),
             Expanded(
               child: SizedBox(
                 height: 80,
@@ -53,7 +47,7 @@ class ProductCartWidget extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFE59A94), // لون الخلفية الوردي
+                        color: AppColors.primaryLight, // لون الخلفية الوردي
                         borderRadius:
                             BorderRadius.circular(20), // الشكل الدائري
                       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../screans/later/basketScreen.dart';
-import '../screans/later/homeScreen.dart';
+import '../screens/nav_bar_screens/basket_flow/basketScreen.dart';
+import '../screens/nav_bar_screens/homeScreen.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -12,11 +12,11 @@ class NavBarState extends State<NavBar> {
   int selectedIndex = 0;
 
   List<Widget> pages = [
-    HomeScreen(),
-    Center(child: Text('Orders')),
-    BasketScreen(),
-    Center(child: Text('Favorite')),
-    Center(child: Text('More')),
+    const HomeScreen(),
+    const Center(child: Text('Orders')),
+    const BasketScreen(),
+    const Center(child: Text('Favorite')),
+    const Center(child: Text('More')),
   ];
 
   void onItemTapped(int index) {

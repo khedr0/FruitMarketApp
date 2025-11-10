@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/constants/strings.dart';
-import 'package:fruit_market/screans/later/basketScreen.dart';
 
 import '../constants/colors.dart';
 import '../widgets/checkBox.dart';
+import 'nav_bar_screens/basket_flow/basketScreen.dart';
 
 class ProductScreen extends StatelessWidget {
   static String id = "productScreen";
@@ -13,9 +13,11 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       appBar: AppBar(
         backgroundColor: AppColors.white,
-        elevation: 0,
+        elevation: 0.5,
+        shadowColor: AppColors.black,
         iconTheme: const IconThemeData(color: AppColors.black),
         title: const Text(
           AppStrings.productName,
@@ -59,9 +61,9 @@ class ProductScreen extends StatelessWidget {
             ),
 
             const SizedBox(height: 16),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   AppStrings.categoryName,
                   style: TextStyle(
@@ -81,9 +83,9 @@ class ProductScreen extends StatelessWidget {
 
             const SizedBox(height: 4),
 
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   AppStrings.productName,
                   style: TextStyle(

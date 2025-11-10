@@ -17,7 +17,7 @@ class _DropDownMenuFilterWidgetState extends State<DropDownMenuFilterWidget> {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
           borderRadius: BorderRadius.circular(25),
@@ -27,7 +27,7 @@ class _DropDownMenuFilterWidgetState extends State<DropDownMenuFilterWidget> {
             icon: Image.asset("assets/Icon ionic-ios-arrow-down.png"),
             value: selectedValue,
             isExpanded: true,
-            items: [
+            items: const [
               DropdownMenuItem(
                 value: "All Areas",
                 child: Text("All Areas"),

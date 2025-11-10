@@ -4,7 +4,7 @@ class CustomTextField extends StatefulWidget {
   final String label;
   final String hint;
   final bool isRequired;
-  final bool hasCountryCode; // لو true يضيف dropdown
+  final bool hasCountryCode;
 
   const CustomTextField({
     super.key,
@@ -68,7 +68,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             child: Row(
               children: [
                 if (widget.hasCountryCode) ...[
-                  Icon(Icons.arrow_drop_down, color: Color(0xff858D9A)),
+                  const Icon(Icons.arrow_drop_down, color: Color(0xff858D9A)),
                   DropdownButtonHideUnderline(
                     child: DropdownButton<String>(
                       value: selectedCode,
@@ -98,8 +98,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     endIndent: 5,
                   ),
                 ],
-
-                // TextField جوه نفس المستطيل
                 Expanded(
                   child: TextField(
                     keyboardType: widget.hasCountryCode

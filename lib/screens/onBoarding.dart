@@ -3,7 +3,7 @@ import 'package:fruit_market/constants/strings.dart';
 import 'package:fruit_market/widgets/customButton.dart';
 
 import '../constants/colors.dart';
-import 'authentication_screans/singingScreen.dart';
+import 'authentication_screes/singing_screen.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
@@ -46,7 +46,7 @@ class _OnBoardingState extends State<OnBoarding> {
               onTap: () {
                 _controller.jumpToPage(pagesData.length - 1);
               },
-              child: Text(
+              child: const Text(
                 AppStrings.skip,
                 style: TextStyle(
                   fontSize: 16,

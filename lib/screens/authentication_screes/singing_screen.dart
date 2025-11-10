@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fruit_market/screans/authentication_screans/loginScreen.dart';
 
 import '../../constants/colors.dart';
 import '../../constants/strings.dart';
+import 'login_screen.dart';
 
 class SingingScreen extends StatelessWidget {
   static String id = "singingScreen";
@@ -74,7 +74,7 @@ class SingingScreen extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, LoginScreen.id);
+                            Navigator.pushNamed(context, LogInScreen.id);
                           },
                           child: const Text(
                             AppStrings.login,

@@ -22,11 +22,11 @@ class _CircularCheckboxExampleState extends State<CircularCheckboxExample> {
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(50), // يجعلها دائرية
-        side: BorderSide(color: Colors.grey, width: 2), // البوردر رصاصي
+        side: const BorderSide(color: Colors.grey, width: 2), // البوردر رصاصي
       ),
-      fillColor: MaterialStateProperty.all(Colors.transparent),
+      fillColor: WidgetStateProperty.all(Colors.transparent),
       checkColor: Colors.green, // لون علامة الصح
-      side: BorderSide(color: Colors.grey, width: 2), // البوردر رصاصي
+      side: const BorderSide(color: Colors.grey, width: 2), // البوردر رصاصي
     );
   }
 }

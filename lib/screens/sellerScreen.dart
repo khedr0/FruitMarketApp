@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/constants/colors.dart';
 import 'package:fruit_market/constants/strings.dart';
 import 'package:fruit_market/widgets/customAppBar.dart';
 
@@ -11,10 +12,11 @@ class SellerScreen extends StatelessWidget {
   static String id = "sellerScreen";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      backgroundColor: AppColors.white,
       appBar: CustomAppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -74,10 +76,13 @@ class SellerScreen extends StatelessWidget {
               AppStrings.products,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
+            Divider(
+              thickness: 2,
+            ),
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  children: const [
+                  children: [
                     ProductWidget(),
                     ProductWidget(),
                     ProductWidget(),

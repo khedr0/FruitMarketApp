@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:fruit_market/screans/onBoarding.dart';
+
+import 'onBoarding.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

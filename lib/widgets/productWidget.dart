@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_market/screans/productScreen.dart';
+import 'package:fruit_market/constants/colors.dart';
+
+import '../screens/productScreen.dart';
 
 class ProductWidget extends StatelessWidget {
   const ProductWidget({super.key});
@@ -11,26 +13,27 @@ class ProductWidget extends StatelessWidget {
         Navigator.pushNamed(context, ProductScreen.id);
       },
       child: Card(
+        color: AppColors.white,
         elevation: 2,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Image(
+              const Image(
                 image: AssetImage("assets/product.png"),
               ),
-              Container(
+              SizedBox(
                 height: 80,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "product name",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    Text(
+                    const Text(
                       "12.00 KD",
                       style: TextStyle(fontSize: 12),
                     ),
@@ -38,13 +41,13 @@ class ProductWidget extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFE59A94), // لون الخلفية الوردي
+                        color: AppColors.primaryLight, // لون الخلفية الوردي
                         borderRadius:
                             BorderRadius.circular(20), // الشكل الدائري
                       ),
-                      child: Text(
+                      child: const Text(
                         "Up to 10% Off",
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
@@ -54,10 +57,10 @@ class ProductWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
-              Image(
+              const Image(
                 image: AssetImage("assets/greenSalla.png"),
               ),
             ],
