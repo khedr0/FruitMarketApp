@@ -3,7 +3,6 @@ import 'package:fruit_market/constants/strings.dart';
 
 import '../constants/colors.dart';
 import '../widgets/checkBox.dart';
-import 'nav_bar_screens/basket_flow/basketScreen.dart';
 
 class ProductScreen extends StatelessWidget {
   static String id = "productScreen";
@@ -203,9 +202,7 @@ class ProductScreen extends StatelessWidget {
               width: double.infinity,
               height: 48,
               child: ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.pushNamed(context, BasketScreen.id);
-                },
+                onPressed: () {},
                 icon: const Icon(Icons.shopping_basket_outlined,
                     color: AppColors.white),
                 label: const Text(

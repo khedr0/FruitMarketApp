@@ -14,6 +14,7 @@ class AppColors {
   // ألوان محايدة
   static const Color textPrimary = Color(0xFF292727);
   static const Color textSecondary = Color(0xFF656565);
+  static const Color failer = Color(0xFFFF4A4A);
 
   // الخلفيات
   static const Color background = Color(0xFFFEFDF9);

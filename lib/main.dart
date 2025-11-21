@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/screens/authentication_screes/checking_by_phone.dart';
 import 'package:fruit_market/screens/authentication_screes/login_screen.dart';
+import 'package:fruit_market/screens/authentication_screes/onBoarding.dart';
 import 'package:fruit_market/screens/authentication_screes/sign_up_screen.dart';
 import 'package:fruit_market/screens/authentication_screes/singing_screen.dart';
-import 'package:fruit_market/screens/nav_bar_screens/basket_flow/basketScreen.dart';
 import 'package:fruit_market/screens/nav_bar_screens/basket_flow/checkout_flow_screen.dart';
-import 'package:fruit_market/screens/onBoarding.dart';
 import 'package:fruit_market/screens/productScreen.dart';
 import 'package:fruit_market/screens/sellerScreen.dart';
 import 'package:fruit_market/screens/splashScreen.dart';
@@ -31,8 +30,7 @@ class FruitMarketApp extends StatelessWidget {
         "phoneVerificationScreen": (context) => const PhoneVerificationScreen(),
         "sellerScreen": (context) => const SellerScreen(),
         "productScreen": (context) => const ProductScreen(),
-        "basketScreen": (context) => const BasketScreen(),
-        "checkoutFlow": (context) => const CheckoutFlowScreen(),
+        "checkoutFlow": (context) => CheckoutFlowScreen(),
       },
     );
   }

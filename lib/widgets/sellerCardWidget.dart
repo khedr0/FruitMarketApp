@@ -12,7 +12,9 @@ class SellerCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, SellerScreen.id);
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const SellerScreen()),
+        );
       },
       child: const Card(
         color: AppColors.white,

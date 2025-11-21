@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_market/screens/nav_bar_screens/basket_flow/checkout_flow_screen.dart';
 
 import '../../../constants/colors.dart';
 import '../../../constants/strings.dart';
 import '../../../widgets/productCartWidget.dart';
 
 class BasketScreen extends StatelessWidget {
-  const BasketScreen({super.key});
+  final VoidCallback onCheckout;
+
+  const BasketScreen({
+    super.key,
+    required this.onCheckout,
+  });
   static String id = "basketScreen";
 
   @override
@@ -123,9 +127,7 @@ class BasketScreen extends StatelessWidget {
                           ],
                         ),
                         ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, CheckoutFlowScreen.id);
-                          },
+                          onPressed: onCheckout,
                           child: Text(
                             "Procced To Checkout",
                             style: TextStyle(color: AppColors.white),

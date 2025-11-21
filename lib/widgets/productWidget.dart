@@ -10,7 +10,9 @@ class ProductWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, ProductScreen.id);
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const ProductScreen()),
+        );
       },
       child: Card(
         color: AppColors.white,
