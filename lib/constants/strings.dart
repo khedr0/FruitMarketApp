@@ -62,4 +62,5 @@ class AppStrings {
   static const String filterBy = 'Filter by';
   static const String deliveredTo = 'Delivered To';
   static const String checkout = 'Checkout';
+  static const String oreders = 'Orders';
 }

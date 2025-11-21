@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/constants/strings.dart';
 
 import '../../../constants/colors.dart';
-import '../../../constants/strings.dart';
 import '../../../widgets/productCartWidget.dart';
 
 class BasketScreen extends StatelessWidget {
@@ -18,15 +18,23 @@ class BasketScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: AppBar(
-        backgroundColor: AppColors.white,
-        elevation: .5,
-        shadowColor: Colors.black,
-        iconTheme: const IconThemeData(color: AppColors.black),
+        leading: IconButton(
+          icon: Image.asset("assets/Icon ionic-ios-arrow-back (1).png"),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: const Text(
           AppStrings.basket,
-          style: TextStyle(color: AppColors.primaryDark),
+          style: TextStyle(
+            color: AppColors.primaryDark,
+            fontWeight: FontWeight.bold,
+          ),
         ),
+        elevation: .5,
+        shadowColor: AppColors.black,
         centerTitle: true,
+        backgroundColor: AppColors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),

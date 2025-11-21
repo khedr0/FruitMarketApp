@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/constants/colors.dart';
+import 'package:fruit_market/constants/strings.dart';
 import 'package:fruit_market/widgets/checkBox.dart';
 import 'package:fruit_market/widgets/customButton.dart';
 
@@ -55,7 +56,7 @@ class CheckoutFlowScreenState extends State<CheckoutFlowScreen> {
           },
         ),
         title: const Text(
-          "Checkout",
+          AppStrings.checkout,
           style: TextStyle(
             color: AppColors.primaryDark,
             fontWeight: FontWeight.bold,
@@ -375,7 +376,7 @@ class CheckoutFlowScreenState extends State<CheckoutFlowScreen> {
                       ),
                     ),
                   ),
-                  CheckoutResult(isSuccess: true),
+                  CheckoutResult(isSuccess: false),
                 ],
               ),
             ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_market/screens/nav_bar_screens/oreders_screen.dart';
 
 import '../screens/nav_bar_screens/basket_flow/basketScreen.dart';
 import '../screens/nav_bar_screens/basket_flow/checkout_flow_screen.dart';
 import '../screens/nav_bar_screens/homeScreen.dart';
+import '../screens/nav_bar_screens/setting_screen.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -54,7 +56,7 @@ class _NavBarState extends State<NavBar> {
           index: selectedIndex,
           children: [
             _buildTabNavigator(_navigatorKeys[0], const HomeScreen()),
-            _buildTabNavigator(_navigatorKeys[1], const HomeScreen()),
+            _buildTabNavigator(_navigatorKeys[1], const OredersScreen()),
             _buildTabNavigator(_navigatorKeys[2], BasketScreen(
               onCheckout: () {
                 _navigatorKeys[2].currentState!.push(
@@ -63,7 +65,7 @@ class _NavBarState extends State<NavBar> {
               },
             )),
             _buildTabNavigator(_navigatorKeys[4], const HomeScreen()),
-            _buildTabNavigator(_navigatorKeys[3], const HomeScreen()),
+            _buildTabNavigator(_navigatorKeys[3], const SettingsScreen()),
           ],
         ),
         bottomNavigationBar: ClipRRect(
