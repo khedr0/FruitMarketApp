@@ -4,8 +4,8 @@ import 'package:fruit_market/widgets/orders_widget.dart';
 
 import '../../constants/colors.dart';
 
-class OredersScreen extends StatelessWidget {
-  const OredersScreen({super.key});
+class OrdersScreen extends StatelessWidget {
+  const OrdersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

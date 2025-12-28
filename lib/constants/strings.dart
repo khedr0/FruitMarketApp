@@ -53,6 +53,9 @@ class AppStrings {
   static const String selectAddons = "Select Addons";
   static const String categoryName = "Category Name";
   static const String basket = "Basket";
+  static const String welcome = "Welcome, Ahmed";
+  static const String update = "Update";
+  static const String contactUs = "Contact Us";
   // Filters / UI
   static const String close = 'Close';
   static const String applyFilter = 'Apply Filter';

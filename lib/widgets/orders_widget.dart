@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
-import '../screens/productScreen.dart';
 
 class OrdersWidget extends StatelessWidget {
   const OrdersWidget({super.key});
@@ -9,11 +8,7 @@ class OrdersWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => const ProductScreen()),
-        );
-      },
+      onTap: () {},
       child: Card(
         color: AppColors.white,
         elevation: 2,
