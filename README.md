@@ -6,13 +6,13 @@ A new Flutter project.
 <p align="center">
   <img src="./screenshots%20%281%29.jpg" width="200"/>
   <img src="./screenshots%20%282%29.jpg" width="200"/>
-  <img src="./screenshots%20%283%29.jpg" width="200"/>
-  <img src="./screenshots%20%284%29.jpg" width="200"/>
+  <img src="./screenshots%20%288%29.jpg" width="200"/>
+  <img src="./screenshots%20%289%29.jpg" width="200"/>
   <img src="./screenshots%20%285%29.jpg" width="200"/>
   <img src="./screenshots%20%286%29.jpg" width="200"/>
   <img src="./screenshots%20%287%29.jpg" width="200"/>
-  <img src="./screenshots%20%288%29.jpg" width="200"/>
-  <img src="./screenshots%20%289%29.jpg" width="200"/>
+  <img src="./screenshots%20%283%29.jpg" width="200"/>
+  <img src="./screenshots%20%284%29.jpg" width="200"/>
 </p>
 ## Getting Started
 
