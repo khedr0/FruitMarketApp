@@ -1,7 +1,19 @@
 # fruit_market
 
 A new Flutter project.
+## Screenshots
 
+<p align="center">
+  <img src="screenshots%20(1).png" width="250"/>
+  <img src="screenshots%20(2).png" width="250"/>
+    <img src="screenshots%20(3).png" width="250"/>
+  <img src="screenshots%20(4).png" width="250"/>
+    <img src="screenshots%20(5).png" width="250"/>
+  <img src="screenshots%20(6).png" width="250"/>
+    <img src="screenshots%20(7).png" width="250"/>
+  <img src="screenshots%20(8).png" width="250"/>
+    <img src="screenshots%20(9).png" width="250"/>
+</p>
 ## Getting Started
 
 This project is a starting point for a Flutter application.
